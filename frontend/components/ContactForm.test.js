@@ -51,7 +51,15 @@ describe("ContactForm component", () => {
       expect(emailError).toBeInTheDocument();
   });
 
-  test('renders "email must be a valid email address" if an invalid email is entered', async () => {});
+  test('renders "email must be a valid email address" if an invalid email is entered', async () => {
+      const emailInput = screen.getByPlaceholderText("bluebill1049@hotmail.com");
+      fireEvent.change(emailInput, { target: { value: "aaa" }});
+      const emailError = await screen.findByText(
+        "Error: email must be a valid email address",
+        { exact: false }
+      );
+      expect(emailError).toBeInTheDocument();
+  });
 
   test('renders "lastName is a required field" if an last name is not entered and the submit button is clicked', async () => {});
 
