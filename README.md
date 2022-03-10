@@ -17,19 +17,19 @@ In this challenge, you will be writing tests for a contact form that has been bu
 
 As a developer, you will be writing tests for every component. As we've learned, tests are a very important part of programming. The tests you will write will help you feel confident in the code you push to production!
 
-***Make sure to complete your tasks one at a time and complete test each task before proceding forward.***
+***Make sure to complete your tasks one at a time and complete test each task before proceeding forward.***
 
 ## Instructions
 
 ### Task 1: Project Set Up
 
-- [ ] Create a forked copy of this project.
-- [ ] Clone your OWN version of the repository in your terminal
-- [ ] Download project dependencies by running `npm install`
-- [ ] Start up the app using `npm start`
-- [ ] In a new terminal window, run `npm test`
-- [ ] With each saved change in your editor, the test runner will re-run all the tests
-- [ ] **IMPORTANT** If a test fails, use the test runner's error messages to find out why it is failing
+- [X] Create a forked copy of this project.
+- [X] Clone your OWN version of the repository in your terminal
+- [X] Download project dependencies by running `npm install`
+- [X] Start up the app using `npm start`
+- [X] In a new terminal window, run `npm test`
+- [X] With each saved change in your editor, the test runner will re-run all the tests
+- [X] **IMPORTANT** If a test fails, use the test runner's error messages to find out why it is failing
 
 ### Task 2: Project Requirements
 
@@ -38,22 +38,22 @@ As a developer, you will be writing tests for every component. As we've learned,
 #### Test Brainstorming
 
 * [ ] Run and play around with the form interface.
-* [ ] Write out a list of possible testcases for this application within Understanding-questions.md.
+* [ ] Write out a list of possible test cases for this application within Understanding-questions.md.
 
 #### Complete a case that tests if
 
 * [ ] the component renders the contact form component without errors.
 * [ ] the header h1 element exists. Include three asserts, if the header is in the document, if the heads is truthy, if the header has the correct test content.
-* [ ] the component renders ONE error message if the user enters less than 4 characters into the firstname field. Make sure to use async / await and the correct screen method to account for state change.
+* [ ] the component renders ONE error message if the user enters less than 4 characters into the first name field. Make sure to use async / await and the correct screen method to account for state change.
 * [ ] the component renders THREE error messages if the user submits without filling in any values.
 * [ ] the component renders ONE error message if the user submits without filling in the email field.
 * [ ] the component renders the text *"email must be a valid email address"* if an invalid email address is typed into the email field.
 * [ ] the component renders the text *"lastName is a required field"* the form is submitted without a last name.
-* [ ] the component renders the firstname, lastname and email text when submitted with valued fields and does **not** render a message value when one is not entered into the message field.
+* [ ] the component renders the first name, last name and email text when submitted with valued fields and does **not** render a message value when one is not entered into the message field.
 * [ ] renders all fields when the user submits with valid text filled in for all fields.
 
 ## Stretch goals
 
 - Look at your test cases in Understanding-questions and see if there are any that you have not completed.
-- From the this list or from your own mind, add in at least one more new testcase.
-- There is alot of state management within our component in this project! See if you can separate the form and error validation code into their own hooks.
+- From the this list or from your own mind, add in at least one more new test case.
+- There is a lot of state management within our component in this project! See if you can separate the form and error validation code into their own hooks.
