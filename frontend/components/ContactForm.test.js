@@ -40,7 +40,16 @@ describe("ContactForm component", () => {
 
   });
 
-  test("renders ONE error message if user enters a valid first name and last name but no email.", async () => {});
+  test("renders ONE error message if user enters a valid first name and last name but no email.", async () => {
+      const firstNameInput = screen.getByPlaceholderText("Edd");
+      fireEvent.change(firstNameInput, { target: { value: "abcde" }});
+      const lastNameInput = screen.getByPlaceholderText("Burke");
+      fireEvent.change(lastNameInput, { target: { value: "abc" }});
+      const submitBtn = screen.getByText("Submit");
+      fireEvent.click(submitBtn);
+      const emailError = await screen.findByText("Error: email must be a valid email address", { exact: false });
+      expect(emailError).toBeInTheDocument();
+  });
 
   test('renders "email must be a valid email address" if an invalid email is entered', async () => {});
 
