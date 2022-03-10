@@ -28,7 +28,17 @@ describe("ContactForm component", () => {
       expect (firstNameError).toBeInTheDocument();
   });
 
-  test("renders THREE error messages if user enters no values into any fields.", async () => {});
+  test("renders THREE error messages if user enters no values into any fields.", async () => {
+      const submitBtn = screen.getByText("Submit");
+      fireEvent.click(submitBtn);
+      const firstNameError = await screen.findByText("Error: firstName must have at least 5 characters", { exact: false });
+      expect(firstNameError).toBeInTheDocument();
+      const lastNameError = await screen.findByText("Error: lastName is a required field", { exact: false });
+      expect(lastNameError).toBeInTheDocument();
+      const emailError = await screen.findByText("Error: email must be a valid email address", { exact: false });
+      expect(emailError).toBeInTheDocument();
+
+  });
 
   test("renders ONE error message if user enters a valid first name and last name but no email.", async () => {});
 
